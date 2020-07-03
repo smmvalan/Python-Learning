@@ -14,12 +14,11 @@ def vowelConsonentDisplay():
     vowels=0
     consonents=0
    
-
     for letter in sta:
         if letter.lower() in "aeiou" :
-            vowels=vowels+1
+            return vowels+1
         else:
-            consonents=consonents+1
+            return consonents+1
 
 def main():
     sta=input("Enter the statement") 
