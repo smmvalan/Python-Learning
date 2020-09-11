@@ -10,21 +10,24 @@ for letter in "onion":
         print("Consonents:{}".format(consonents))
  
 '''
-def vowelConsonentDisplay():
+sta = ""
+def vowelConsonentDisplay(sta):
     vowels=0
     consonents=0
    
     for letter in sta:
         if letter.lower() in "aeiou" :
-            return vowels+1
+            vowels = vowels+1
         else:
-            return consonents+1
+            consonents =  consonents+1
+    return (vowels, consonents)
 
 def main():
-    sta=input("Enter the statement") 
-    print(vowels)
-    print(consonents)
-    vowelConsonentDisplay()
+    sta=input("Enter the statement > ") 
+    # print(vowels)
+    # print(consonents)
+    vowels, consonents = vowelConsonentDisplay(sta)
+    print("vowels {} consonents {} out of {}".format(vowels, consonents, len(sta)))
 
 main()
 

@@ -1,14 +1,32 @@
 #function 1
 
-def colorDisplay1 ():
-    return
+def GetUserInput ():
+    list1=[]
+    colorCount = int(input("Enter the colour list length:"))
+    print("Enter the colours one by one:")
+    for i in range(colorCount): #3 (0,1,2)
+        data=str(input())
+        list1.append(data)
+    return list1
+
+def AddColors(x, colorName):
+     # verify x is list
+     x.append(colorName)
+
+def PrintColor(x1):
+    for color in x1:
+        print(color)
+
 def main():
-    color_list=["red","blue","green","yellow"]
-    print(color_list[1])
-    print(color_list[-1])
-    colorDisplay1()
+    #color_list=["red","blue","green","yellow"]
+    color_list = GetUserInput()
+    AddColors(color_list, "black")
+    AddColors(color_list, 'kkk')
+    PrintColor(color_list)
+
 main()
-strg='*'*30
+
+''' strg='*'*30
 print(strg)
 
 # Function 2 callout list as input
@@ -80,3 +98,5 @@ def main():
 main()
 strg='*'*30
 print(strg)
+
+'''
